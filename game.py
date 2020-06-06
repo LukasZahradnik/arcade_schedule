@@ -1,4 +1,5 @@
 import arcade
+import state
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
@@ -16,6 +17,8 @@ class MyGame(arcade.Window):
 
     def on_draw(self):
         arcade.start_render()
+
+        arcade.draw_rectangle_filled(state.x, state.y, 20, 20, (255, 0, 0, 255))
 
     def on_update(self, delta_time):
         import kid
